@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "genre": "romance",
+    "imgUrl": "https://www.svgrepo.com/show/419182/heart-love-marriage-21.svg"
+  },
+
+  {
+    "id": 2,
+    "genre": "history",
+    "imgUrl": "https://www.svgrepo.com/show/177739/history-greek.svg"
+  },
+
+  {
+    "id": 3,
+    "genre": "fiction",
+    "imgUrl": "https://www.svgrepo.com/show/105309/rocket-ship.svg"
+  },
+
+  {
+    "id": 4,
+    "genre": "comedy",
+    "imgUrl": "https://www.svgrepo.com/show/267226/mask-comedy.svg"
+  }
+]
