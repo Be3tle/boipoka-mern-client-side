@@ -1,15 +1,14 @@
 import { useLoaderData, useParams } from 'react-router-dom';
-import BookCard from './BookCard';
 import { useEffect, useState } from 'react';
+import AllBooksCard from './AllBooksCard';
 
-const Books = () => {
-  const { genre } = useParams();
-
-  const loadedBooks = useLoaderData();
-  const [books, setBooks] = useState(loadedBooks);
-  const genreBook = books.filter(
-    (book) => book.genre?.toLowerCase() == genre?.toLocaleLowerCase()
-  );
+const AllBooks = () => {
+  const [allBooks, setAllBooks] = useState();
+  useEffect(() => {
+    fetch('http://localhost:5000/books')
+      .then((res) => res.json())
+      .then((data) => setAllBooks(data));
+  });
 
   const [loading, setLoading] = useState(true);
 
@@ -23,14 +22,14 @@ const Books = () => {
     <div className="flex justify-center items-center flex-col">
       {loading ? (
         <span className="loading loading-spinner loading-lg my-32"></span>
-      ) : genreBook.length ? (
+      ) : allBooks.length ? (
         <div>
-          <h1 className="text-2xl font-semibold mt-32 mb-4 text-center">
-            Popular {genre} books
+          <h1 className="text-2xl font-semibold my-20 text-center">
+            Popular books
           </h1>
-          <div className="grid md:grid-cols-2 gap-12">
-            {genreBook.map((book) => (
-              <BookCard key={book._id} book={book}></BookCard>
+          <div className="grid md:grid-cols-3 gap-12">
+            {allBooks.map((book) => (
+              <AllBooksCard key={book._id} book={book}></AllBooksCard>
             ))}
           </div>
         </div>
@@ -45,4 +44,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default AllBooks;

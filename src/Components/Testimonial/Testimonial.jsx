@@ -8,9 +8,10 @@ const Testimonial = () => {
           </h1>
         </div>
         <div className="container flex flex-col items-center justify-center mx-auto lg:flex-row lg:flex-wrap lg:justify-evenly lg:px-10">
+          {/* 1 */}
           <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
-            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
-              <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
+            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
+              <p className="relative px-6 py-1 text-lg italic text-center text-gray-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -43,9 +44,11 @@ const Testimonial = () => {
               <p className="text-sm uppercase">CSI</p>
             </div>
           </div>
+
+          {/* 2 */}
           <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
-            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
-              <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
+            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
+              <p className="relative px-6 py-1 text-lg italic text-center text-gray-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -78,9 +81,11 @@ const Testimonial = () => {
               <p className="text-sm uppercase">CEO</p>
             </div>
           </div>
+
+          {/* 3 */}
           <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
-            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
-              <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
+            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
+              <p className="relative px-6 py-1 text-lg italic text-center text-gray-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -113,9 +118,11 @@ const Testimonial = () => {
               <p className="text-sm uppercase">HR</p>
             </div>
           </div>
+
+          {/* 4 */}
           <div className="flex flex-col max-w-sm mx-4 my-6 shadow-lg">
-            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 dark:bg-gray-900">
-              <p className="relative px-6 py-1 text-lg italic text-center dark:text-gray-100">
+            <div className="px-4 py-12 rounded-t-lg sm:px-8 md:px-12 bg-gray-900">
+              <p className="relative px-6 py-1 text-lg italic text-center text-gray-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"

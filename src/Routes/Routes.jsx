@@ -7,6 +7,8 @@ import Error from '../Pages/Error/Error';
 import AddBook from '../Pages/AddBook/AddBook';
 import Books from '../Pages/Books/Books';
 import Details from '../Pages/Details/Details';
+import AllBooks from '../Pages/AllBooks/AllBooks';
+import UpdateBook from '../Pages/UpdateBook/UpdateBook';
 
 const Router = createBrowserRouter([
   {
@@ -31,6 +33,10 @@ const Router = createBrowserRouter([
         path: '/add-book',
         element: <AddBook></AddBook>,
       },
+      {
+        path: '/all-books',
+        element: <AllBooks></AllBooks>,
+      },
 
       {
         path: '/books/:genre',
@@ -41,6 +47,12 @@ const Router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details></Details>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/books/${params.id}`),
+      },
+      {
+        path: '/update/:id',
+        element: <UpdateBook></UpdateBook>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/books/${params.id}`),
       },
