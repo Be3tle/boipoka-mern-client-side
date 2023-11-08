@@ -3,8 +3,7 @@ import Swal from 'sweetalert2';
 
 const UpdateBook = () => {
   const book = useLoaderData();
-  const { _id, title, author, genre, quantity, rating, description, imgUrl } =
-    book;
+  const { _id, title, author, genre, quantity, rating, imgUrl } = book;
   console.log(book);
 
   const handleUpdateBook = (e) => {
@@ -16,12 +15,10 @@ const UpdateBook = () => {
     const genre = form.category.value;
     const quantity = form.quantity.value;
     const rating = form.rating.value;
-    const description = form.description.value;
     const imgUrl = form.photo.value;
 
-    const updateBook = {
+    const updatedBook = {
       title,
-      description,
       rating,
       genre,
       quantity,
@@ -29,10 +26,10 @@ const UpdateBook = () => {
       imgUrl,
     };
 
-    console.log(updateBook);
+    console.log(updatedBook);
 
     // send data to the server
-    fetch(`http://localhost:5000/books/${params.id}`, {
+    fetch(`http://localhost:5000/books/${_id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
