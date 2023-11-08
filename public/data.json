@@ -1,25 +1,146 @@
 [
   {
     "id": 1,
-    "genre": "romance",
-    "imgUrl": "https://www.svgrepo.com/show/419182/heart-love-marriage-21.svg"
+    "title": "Love in Bloom",
+    "description": "A heartwarming tale of love and self-discovery.",
+    "author": "Sheila Roberts",
+    "rating": 4,
+    "imgUrl": "https://mpd-biblio-covers.imgix.net/9780312384814.jpg?w=900",
+    "genre": "Romance"
   },
-
   {
     "id": 2,
-    "genre": "history",
-    "imgUrl": "https://www.svgrepo.com/show/177739/history-greek.svg"
+    "title": "Whispers of Desire",
+    "description": "Passion ignites in this tale of forbidden love.",
+    "author": "Dorothy Words",
+    "rating": 4,
+    "imgUrl": "https://m.media-amazon.com/images/I/6163tf0o2LL._AC_UF350,350_QL50_.jpg",
+    "genre": "Romance"
   },
-
   {
     "id": 3,
-    "genre": "fiction",
-    "imgUrl": "https://www.svgrepo.com/show/105309/rocket-ship.svg"
+    "title": "Eternal Love",
+    "description": "A timeless romance that transcends generations.",
+    "author": "Mary Johnson",
+    "rating": 5,
+    "imgUrl": "https://img.wattpad.com/cover/329490668-256-k76085.jpg",
+    "genre": "Romance"
   },
-
   {
     "id": 4,
-    "genre": "comedy",
-    "imgUrl": "https://www.svgrepo.com/show/267226/mask-comedy.svg"
+    "title": "Summer Affair",
+    "description": "Passionate encounters under the summer sun.",
+    "author": "Mary Oldham",
+    "rating": 4,
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1640239204i/59914194.jpg",
+    "genre": "Romance"
+  },
+  {
+    "id": 5,
+    "title": "The Age of Enlightenment",
+    "description": "Exploring the intellectual revolution of the 18th century.",
+    "author": "James Adams",
+    "rating": 5,
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1481479693i/33310575.jpg",
+    "genre": "History"
+  },
+  {
+    "id": 6,
+    "title": "Empires of Antiquity",
+    "description": "A captivating journey through ancient civilizations.",
+    "author": "Sarah Brown",
+    "rating": 4,
+    "imgUrl": "https://cf.geekdo-images.com/kvYc8_oGiudpZe3aLzVLSA__itemrep/img/ed6Rw-c3FYQLGPrxMLKtWt03tTA=/fit-in/246x300/filters:strip_icc()/pic152187.jpg",
+    "genre": "History"
+  },
+  {
+    "id": 7,
+    "title": "World War Chronicles",
+    "description": "Uncovering the stories of heroism and sacrifice.",
+    "author": "Michael Davis",
+    "rating": 4,
+    "imgUrl": "https://m.media-amazon.com/images/I/51AyOfji1UL.jpg",
+    "genre": "History"
+  },
+  {
+    "id": 8,
+    "title": "Renaissance Reimagined",
+    "description": "A fresh perspective on the cultural rebirth of Europe.",
+    "author": "Emily Turner",
+    "rating": 4,
+    "imgUrl": "https://pictures.abebooks.com/isbn/9781803281261-uk.jpg",
+    "genre": "History"
+  },
+  {
+    "id": 9,
+    "title": "Parallel Realities",
+    "description": "A mind-bending exploration of alternate worlds.",
+    "author": "Robert Green",
+    "rating": 5,
+    "imgUrl": "https://m.media-amazon.com/images/I/517iAunk08L.jpg",
+    "genre": "Fiction"
+  },
+  {
+    "id": 10,
+    "title": "Dreams of Tomorrow",
+    "description": "Visions of the future that challenge our present.",
+    "author": "Susan Lee",
+    "rating": 4,
+    "imgUrl": "https://pabpub.com/books/49/covers/img0.jpg",
+    "genre": "Fiction"
+  },
+  {
+    "id": 11,
+    "title": "Whispers in the Dark",
+    "description": "A haunting tale of mystery and intrigue.",
+    "author": "Richard Taylor",
+    "rating": 4,
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1688748379i/184858132.jpg",
+    "genre": "Fiction"
+  },
+  {
+    "id": 12,
+    "title": "The Forgotten Realm",
+    "description": "Lost worlds and ancient secrets await discovery.",
+    "author": "Laura Evans",
+    "rating": 4,
+    "imgUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1606844931i/54513688.jpg",
+    "genre": "Fiction"
+  },
+  {
+    "id": 13,
+    "title": "Laugh Out Loud",
+    "description": "Hilarious misadventures that will leave you in stitches.",
+    "author": "Mark Johnson",
+    "rating": 5,
+    "imgUrl": "https://m.media-amazon.com/images/I/81NBJdUGRNL._AC_UF894,1000_QL80_.jpg",
+    "genre": "Comedy"
+  },
+  {
+    "id": 14,
+    "title": "Comic Relief",
+    "description": "A collection of witty anecdotes and comedic tales.",
+    "author": "Jennifer Smith",
+    "rating": 4,
+    "imgUrl": "https://m.media-amazon.com/images/I/61Hm-aRXK9S._AC_UF1000,1000_QL80_.jpg",
+    "genre": "Comedy"
+  },
+  {
+    "id": 15,
+    "title": "Jokes for Days",
+    "description": "A treasury of jokes to brighten your day.",
+    "author": "Daniel Brown",
+    "rating": 5,
+    "imgUrl": "https://m.media-amazon.com/images/I/41wRJXwlg8L.jpg",
+    "genre": "Comedy"
+  },
+  {
+    "id": 16,
+    "title": "Funny Bones",
+    "description": "A rib-tickling journey through the world of comedy.",
+    "author": "Emma Turner",
+    "rating": 4,
+    "imgUrl": "https://m.media-amazon.com/images/I/71Cc2tsrV9L._AC_UF894,1000_QL80_.jpg",
+    "genre": "Comedy"
   }
 ]

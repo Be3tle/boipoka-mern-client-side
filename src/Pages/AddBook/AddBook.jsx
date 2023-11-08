@@ -5,22 +5,22 @@ const AddBook = () => {
     e.preventDefault();
 
     const form = e.target;
-    const bookName = form.bookName.value;
-    const authorName = form.authorName.value;
-    const category = form.category.value;
+    const title = form.bookName.value;
+    const author = form.authorName.value;
+    const genre = form.category.value;
     const quantity = form.quantity.value;
     const rating = form.rating.value;
     const description = form.description.value;
-    const photo = form.photo.value;
+    const imgURL = form.photo.value;
 
     const newBook = {
-      bookName,
+      title,
       description,
       rating,
-      category,
+      genre,
       quantity,
-      authorName,
-      photo,
+      author,
+      imgURL,
     };
 
     console.log(newBook);
