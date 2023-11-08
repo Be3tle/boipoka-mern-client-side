@@ -20,8 +20,7 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 - **Frontend**:
 
   - React.js
-  - Redux for state management
-  - CSS for styling
+  - Tailwind CSS for styling
 
 - **Backend**:
   - Node.js with Express.js for the server
