@@ -8,7 +8,7 @@ const GenreCard = ({ genre }) => {
   return (
     <div>
       <Link to={`/books/${genreName}`} state={genreName}>
-        <div className="card w-48 h-40 shadow-md rounded bg-red-100 relative">
+        <div className="card w-48 h-40 shadow-md rounded bg-violet-300 relative">
           <figure>
             <img src={imgUrl} className="w-32 ml-7" alt="" />
           </figure>

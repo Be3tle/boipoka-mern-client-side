@@ -1,34 +1,30 @@
-/* eslint-disable react/prop-types */
+import { Rating } from '@smastrom/react-rating';
+
+import '@smastrom/react-rating/style.css';
+
 import { Link } from 'react-router-dom';
 
 const BookCard = ({ book }) => {
-  const { _id, title, genre, author, rating, description, imgUrl } = book;
+  const { _id, title, genre, author, rating, imgUrl } = book;
 
   return (
-    <div className="card w-80 bg-base-100 shadow-xl p-5">
+    <div className="card w-56 bg-violet-100 shadow-sm p-4 rounded-md">
       <figure>
-        <img src={imgUrl} className="w-48" alt="book" />
+        <img src={imgUrl} className="w-32 rounded-sm" alt="book" />
       </figure>
       <div className="">
-        <div className="flex justify-between my-2">
-          <h2 className="text-lg font-semibold">{title}</h2>
+        <h2 className="text-lg font-semibold mt-3">{title}</h2>
+        {/* use rating here */}
+        <Rating style={{ maxWidth: 150 }} value={rating} readOnly />
+        <div className="my-2">
+          <p className="font-medium">{author}</p>
           <p>{genre}</p>
         </div>
-        <div className="flex justify-between my-2">
-          <p className="font-medium">{author}</p>
-        </div>
-        <p className="my-4">{description}</p>
-        <p>Rating: {rating}</p>
-        <div className="card-actions justify-center mt-4">
-          <Link to={`/details/${_id}`}>
-            <button className="btn bg-cyan-500 hover:bg-cyan-700 text-white">
-              Details
-            </button>
-          </Link>
 
-          <Link to={`/update/${_id}`}>
-            <button className="btn bg-cyan-500 hover:bg-cyan-700 text-white">
-              Update
+        <div className="card-actions justify-center mt-2">
+          <Link to={`/details/${_id}`}>
+            <button className="flex items-center justify-center w-full py-2 px-16 font-semibold rounded-md bg-violet-400 text-white">
+              Details
             </button>
           </Link>
         </div>

@@ -13,7 +13,7 @@ const Genres = () => {
   }, []);
 
   return (
-    <div className="py-10 bg-red-50 flex flex-col justify-center items-center">
+    <div className="py-10 bg-violet-50 flex flex-col justify-center items-center">
       <h1 className="text-center text-3xl font-normal py-7">Book Genres</h1>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         {genres?.map((genre) => (
