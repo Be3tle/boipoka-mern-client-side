@@ -19,6 +19,33 @@ const Nav = () => {
       .catch((error) => console.log(error));
   };
 
+  const [isDarkMode, setIsDarkMode] = useState(() => false);
+
+  const [theme, setTheme] = useState('light');
+
+  const handleThemeSwitch = () => {
+    const html = document.documentElement;
+
+    if (theme === 'light') {
+      html.classList.remove('light');
+      html.classList.add('dark');
+      setTheme('dark');
+
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+  useEffect(() => {
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    setTheme(currentTheme);
+    const html = document.documentElement;
+    html.classList.add(currentTheme);
+  }, []);
+
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
@@ -36,7 +63,7 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex items-center">
+        <a href="/" className="flex items-center dark:text-violet-100">
           Home
         </a>
       </Typography>
@@ -46,7 +73,7 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/add-book" className="flex items-center">
+        <a href="/add-book" className="flex items-center dark:text-violet-100">
           Add Book
         </a>
       </Typography>
@@ -56,7 +83,7 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/all-books" className="flex items-center">
+        <a href="/all-books" className="flex items-center dark:text-violet-100">
           All Books
         </a>
       </Typography>
@@ -66,7 +93,10 @@ const Nav = () => {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/borrowed-books" className="flex items-center">
+        <a
+          href="/borrowed-books"
+          className="flex items-center dark:text-violet-100"
+        >
           Borrowed Books
         </a>
       </Typography>
@@ -74,12 +104,12 @@ const Nav = () => {
   );
 
   return (
-    <div className="-m-6 max-h-[768px] w-[calc(100%+48px)]  pt-4 py-2 bg-violet-50 glass">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+    <div className="-m-6  w-[calc(100%+48px)]  pt-4 py-2">
+      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 dark:bg-gray-800 bg-violet-50">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link to="/" className="btn btn-ghost normal-case text-xl">
             <img className="w-10" src={logo} alt="" />
-            <h1 className="text-black">
+            <h1 className="text-black dark:text-violet-100">
               boi<span className="font-normal">poka</span>
             </h1>
           </Link>
@@ -93,7 +123,9 @@ const Nav = () => {
                   size="sm"
                   className="hidden lg:inline-block"
                 >
-                  <span className="text-black">Log Out</span>
+                  <span className="text-black dark:text-violet-100">
+                    Log Out
+                  </span>
                 </Button>
               ) : (
                 <Link to="/login">
@@ -102,7 +134,9 @@ const Nav = () => {
                     size="sm"
                     className="hidden lg:inline-block"
                   >
-                    <span className="text-black">Log In</span>
+                    <span className="text-black dark:text-violet-100">
+                      Log In
+                    </span>
                   </Button>
                 </Link>
               )}
@@ -112,13 +146,12 @@ const Nav = () => {
                   src={user ? user?.photoURL : emblem}
                 />
               </div>
-              {/* <Button
-                variant="gradient"
-                size="sm"
-                className="hidden lg:inline-block"
-              >
-                <span>Sign in</span>
-              </Button> */}
+              <input
+                onClick={handleThemeSwitch}
+                type="checkbox"
+                className="toggle"
+                id="my-toggle"
+              />
             </div>
             <IconButton
               variant="text"
@@ -163,7 +196,9 @@ const Nav = () => {
           {navList}
           <div className="flex items-center gap-x-1">
             <Button fullWidth variant="text" size="sm">
-              <span className="text-black font-medium">Log In</span>
+              <span className="text-black font-medium dark:text-gray-100">
+                Log In
+              </span>
             </Button>
           </div>
         </MobileNav>
