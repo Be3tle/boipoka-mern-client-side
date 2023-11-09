@@ -80,7 +80,7 @@ const Borrows = () => {
             <tr>
               <th></th>
               <th></th>
-              <th></th>
+              <th>Book</th>
               <th>Borrow date</th>
               <th>Return date</th>
               <th></th>

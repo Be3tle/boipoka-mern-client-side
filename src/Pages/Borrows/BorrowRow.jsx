@@ -7,7 +7,7 @@ const BorrowRow = ({ borrow, handleReturn2, handleReturn }) => {
       <td>
         <div className="avatar">
           <div className="rounded w-24 h-24">
-            {img && <img src={img} alt="Avatar Tailwind CSS Component" />}
+            {img && <img src={img} alt="" />}
           </div>
         </div>
       </td>
@@ -17,7 +17,7 @@ const BorrowRow = ({ borrow, handleReturn2, handleReturn }) => {
       <th>
         <button
           onClick={() => handleReturn2(_id)}
-          className="btn bg-violet-400 btn-sm"
+          className="btn bg-violet-400"
         >
           Return
         </button>

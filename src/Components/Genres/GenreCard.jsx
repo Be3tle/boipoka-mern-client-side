@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 
 const GenreCard = ({ genre }) => {
   const { genreName, imgUrl } = genre || {};
-  // const imageUrl =
-  //   'https://www.svgrepo.com/show/419182/heart-love-marriage-21.svg';
 
   return (
     <div>
