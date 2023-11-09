@@ -48,7 +48,7 @@ const Register = () => {
 
   return (
     <div className="text-center flex justify-center items-center mt-20 mb-10">
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl dark:bg-gray-900 dark:text-gray-100 my-20">
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100 my-20">
         <h1 className="text-2xl font-bold text-center">Register</h1>
         <form
           onSubmit={handleRegister}
@@ -57,7 +57,7 @@ const Register = () => {
           className="space-y-6"
         >
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block dark:text-gray-400">
+            <label htmlFor="username" className="block text-gray-400">
               Name
             </label>
             <input
@@ -65,11 +65,11 @@ const Register = () => {
               required
               name="name"
               placeholder="Name"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
           </div>{' '}
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block dark:text-gray-400">
+            <label htmlFor="username" className="block text-gray-400">
               Photo URL
             </label>
             <input
@@ -77,11 +77,11 @@ const Register = () => {
               required
               name="photo"
               placeholder="Photo URL"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
           </div>{' '}
           <div className="space-y-1 text-sm">
-            <label htmlFor="username" className="block dark:text-gray-400">
+            <label htmlFor="username" className="block text-gray-400">
               Email
             </label>
             <input
@@ -89,32 +89,32 @@ const Register = () => {
               required
               name="email"
               placeholder="Email"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
           </div>
           <div className="space-y-1 text-sm">
-            <label htmlFor="password" className="block dark:text-gray-400">
+            <label htmlFor="password" className="block text-gray-400">
               Password
             </label>
             <input
               type="password"
               name="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 focus:dark:border-violet-400"
+              className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400"
             />
           </div>
           {regError && <p className="text-red-600">{regError}</p>}
-          <button className="block w-full p-3 text-center rounded-sm dark:text-gray-900 dark:bg-red-50">
+          <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-red-50">
             Register
           </button>
         </form>
 
-        <p className="text-xs text-center sm:px-6 dark:text-gray-400">
+        <p className="text-xs text-center sm:px-6 text-gray-400">
           Already have an account?
           <a
             rel="noopener noreferrer"
             href="/login"
-            className="underline dark:text-gray-100"
+            className="underline text-gray-100"
           >
             Log in
           </a>

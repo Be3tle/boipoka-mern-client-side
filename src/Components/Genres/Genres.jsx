@@ -5,7 +5,7 @@ const Genres = () => {
   const [genres, setGenres] = useState();
 
   useEffect(() => {
-    fetch('http://localhost:5000/genre')
+    fetch('https://boipoka-server.vercel.app/genre')
       .then((res) => res.json())
       .then((data) => {
         setGenres(data);

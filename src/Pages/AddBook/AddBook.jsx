@@ -26,7 +26,7 @@ const AddBook = () => {
     console.log(newBook);
 
     // send data to server
-    fetch('http://localhost:5000/books', {
+    fetch('https://boipoka-server.vercel.app/books', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

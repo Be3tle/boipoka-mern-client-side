@@ -9,6 +9,8 @@ import Books from '../Pages/Books/Books';
 import Details from '../Pages/Details/Details';
 import AllBooks from '../Pages/AllBooks/AllBooks';
 import UpdateBook from '../Pages/UpdateBook/UpdateBook';
+import PrivateRoute from './PrivateRoute';
+import Borrows from '../Pages/Borrows/Borrows';
 
 const Router = createBrowserRouter([
   {
@@ -31,30 +33,58 @@ const Router = createBrowserRouter([
       },
       {
         path: '/add-book',
-        element: <AddBook></AddBook>,
+        element: (
+          <PrivateRoute>
+            <AddBook></AddBook>,
+          </PrivateRoute>
+        ),
       },
       {
         path: '/all-books',
-        element: <AllBooks></AllBooks>,
+        element: (
+          <PrivateRoute>
+            <AllBooks></AllBooks>,
+          </PrivateRoute>
+        ),
       },
 
       {
         path: '/books/:genre',
-        element: <Books></Books>,
-        loader: () => fetch('http://localhost:5000/books'),
+        element: (
+          <PrivateRoute>
+            <Books></Books>
+          </PrivateRoute>
+        ),
+        loader: () => fetch('https://boipoka-server.vercel.app/books'),
       },
 
       {
         path: '/details/:id',
-        element: <Details></Details>,
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://boipoka-server.vercel.app/books/${params.id}`),
       },
       {
         path: '/update/:id',
-        element: <UpdateBook></UpdateBook>,
+        element: (
+          <PrivateRoute>
+            <UpdateBook></UpdateBook>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/books/${params.id}`),
+          fetch(`https://boipoka-server.vercel.app/books/${params.id}`),
+      },
+      {
+        path: '/borrowed-books',
+        element: (
+          <PrivateRoute>
+            <Borrows></Borrows>
+          </PrivateRoute>
+        ),
       },
     ],
   },

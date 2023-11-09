@@ -5,7 +5,7 @@ import AllBooksCard from './AllBooksCard';
 const AllBooks = () => {
   const [allBooks, setAllBooks] = useState();
   useEffect(() => {
-    fetch('http://localhost:5000/books')
+    fetch('https://boipoka-server.vercel.app/books')
       .then((res) => res.json())
       .then((data) => setAllBooks(data));
   });

@@ -4,7 +4,7 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 
 ## Live Link
 
-[https://boip0ka.web.app/](https://boip0ka.web.app/)
+[boipoka](https://boip0ka.web.app/)
 
 ## Features
 
@@ -22,9 +22,8 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
   - React.js
   - Tailwind CSS for styling
 
-- **Backend**:
+- **Backend**: [repo link](https://github.com/Porgramming-Hero-web-course/b8a11-server-side-Be3tle)
   - Node.js with Express.js for the server
   - MongoDB for the database
-  - Mongoose for database modeling
 
 Feel free to explore the website and enjoy borrowing books from various genres! If you encounter any issues or have suggestions for improvements, please don't hesitate to contribute. Happy reading!
