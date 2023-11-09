@@ -52,7 +52,7 @@ const Login = () => {
             }
           });
 
-        // get access token
+        // get access  token
       })
       .catch((error) => {
         console.error(error);
