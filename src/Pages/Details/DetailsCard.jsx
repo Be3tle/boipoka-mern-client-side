@@ -1,7 +1,6 @@
-import { useContext, useRef } from 'react';
+import { useContext, useRef, useState } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Provider/AuthProvider';
-import ReadDoc from './ReadMore';
 import { Link } from 'react-router-dom';
 
 const DetailsCard = ({ book }) => {
@@ -11,6 +10,8 @@ const DetailsCard = ({ book }) => {
 
   const { user } = useContext(AuthContext);
   const dialogRef = useRef();
+
+  const [updatedQuantity, setUpdatedQuantity] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -45,20 +46,32 @@ const DetailsCard = ({ book }) => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+
+        const newQuantity = quantity - 1;
         if (data.insertedId) {
-          Swal.fire({
-            title: 'Added successfully!',
-            text: 'Do you want to continue?',
-            icon: 'success',
-            confirmButtonText: 'Sure!',
-          });
-          dialogRef.current.close();
+          fetch(`https://boipoka-server.vercel.app/books/${_id}`, {
+            method: 'PATCH',
+            headers: {
+              'content-type': 'application/json',
+            },
+            body: JSON.stringify({ quantity: newQuantity }),
+          })
+            .then((res) => res.json())
+            .then((updateData) => {
+              console.log(updateData);
+
+              if (updateData.success == true) {
+                Swal.fire({
+                  title: 'Borrowed successfully!',
+                  text: 'Do you want to continue?',
+                  icon: 'success',
+                  confirmButtonText: 'Sure!',
+                });
+                dialogRef.current.close();
+              }
+            });
         }
       });
-  };
-
-  const doc = () => {
-    const readDoc = <ReadDoc />;
   };
 
   return (
@@ -73,16 +86,20 @@ const DetailsCard = ({ book }) => {
           <p>Available copies: {quantity}</p>
           <div className="card-actions">
             <Link to={`/read-more`}>
-              <button onClick={doc} className="btn bg-violet-400 px-5 py-3 ">
-                Read
-              </button>
+              <button className="btn bg-violet-400 px-5 py-3 ">Read</button>
             </Link>
-            <button
-              onClick={() => dialogRef.current.showModal()}
-              className="btn bg-violet-400 px-5 py-3"
-            >
-              Borrow
-            </button>
+            {quantity > 0 ? (
+              <button
+                onClick={() => dialogRef.current.showModal()}
+                className="btn bg-violet-400 px-5 py-3"
+              >
+                Borrow
+              </button>
+            ) : (
+              <button disabled className="btn bg-violet-400 px-5 py-3">
+                Out of stock
+              </button>
+            )}
 
             {/* Open the modal using document.getElementById('ID').showModal() method */}
 

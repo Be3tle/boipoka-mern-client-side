@@ -1,4 +1,4 @@
-const BorrowRow = ({ borrow, handleReturn2, handleReturn }) => {
+const BorrowRow = ({ borrow, handleReturn }) => {
   const { _id, borrowDate, returnDate, bookName, img, status } = borrow;
 
   return (
@@ -15,10 +15,7 @@ const BorrowRow = ({ borrow, handleReturn2, handleReturn }) => {
       <td>{borrowDate}</td>
       <td>{returnDate}</td>
       <th>
-        <button
-          onClick={() => handleReturn2(_id)}
-          className="btn bg-violet-400"
-        >
+        <button onClick={() => handleReturn(_id)} className="btn bg-violet-400">
           Return
         </button>
       </th>
