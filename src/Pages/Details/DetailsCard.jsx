@@ -1,6 +1,8 @@
 import { useContext, useRef } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Provider/AuthProvider';
+import ReadDoc from './ReadMore';
+import { Link } from 'react-router-dom';
 
 const DetailsCard = ({ book }) => {
   const { _id, title, imgUrl, description, genre, quantity } = book || {};
@@ -55,6 +57,10 @@ const DetailsCard = ({ book }) => {
       });
   };
 
+  const doc = () => {
+    const readDoc = <ReadDoc />;
+  };
+
   return (
     <div className="flex justify-center items-center my-20">
       <div className="card card-side w-1/2 bg-base-100 shadow-xl">
@@ -66,7 +72,11 @@ const DetailsCard = ({ book }) => {
           <p>{description}</p>
           <p>Available copies: {quantity}</p>
           <div className="card-actions">
-            <button className="btn bg-violet-400 px-5 py-3 ">Read</button>
+            <Link to={`/read-more`}>
+              <button onClick={doc} className="btn bg-violet-400 px-5 py-3 ">
+                Read
+              </button>
+            </Link>
             <button
               onClick={() => dialogRef.current.showModal()}
               className="btn bg-violet-400 px-5 py-3"

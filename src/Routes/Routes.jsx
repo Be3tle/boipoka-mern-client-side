@@ -11,6 +11,7 @@ import AllBooks from '../Pages/AllBooks/AllBooks';
 import UpdateBook from '../Pages/UpdateBook/UpdateBook';
 import PrivateRoute from './PrivateRoute';
 import Borrows from '../Pages/Borrows/Borrows';
+import ReadMore from '../Pages/Details/ReadMore';
 
 const Router = createBrowserRouter([
   {
@@ -83,6 +84,14 @@ const Router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Borrows></Borrows>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/read-more',
+        element: (
+          <PrivateRoute>
+            <ReadMore></ReadMore>
           </PrivateRoute>
         ),
       },

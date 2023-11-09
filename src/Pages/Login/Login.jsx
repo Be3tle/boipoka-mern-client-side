@@ -20,7 +20,7 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         // navigate after login
-        navigate(location?.state ? location.state : '/');
+        navigate(location?.state ? location?.state : '/');
       })
       .catch((error) => {
         console.log(error.message);

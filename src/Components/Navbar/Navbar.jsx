@@ -140,7 +140,7 @@ const Nav = () => {
                   </Button>
                 </Link>
               )}
-              <div className="w-10 rounded-full mr-3">
+              <div className="w-8 rounded-full mr-3">
                 <img
                   className="rounded-full"
                   src={user ? user?.photoURL : emblem}
