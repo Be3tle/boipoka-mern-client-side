@@ -1,4 +1,4 @@
-Certainly! Here's the modified version of your project details, including information about JWT (JSON Web Token) and Axios:
+Apologies for the oversight. Let's ensure JWT is included in the project details:
 
 ---
 
@@ -16,7 +16,7 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 
 ## Features
 
-- **User Authentication**: Users can sign up, log in, and manage their accounts securely using JWT.
+- **User Authentication**: Users can sign up, log in, and manage their accounts securely using Firebase Authentication.
 - **Browse Books**: Users can explore a wide range of books categorized by genre.
 - **Book Details**: Users can view detailed information about each book, including title, author, genre, and availability status.
 - **Borrow Books**: Authenticated users can borrow books if they are available.
@@ -34,7 +34,7 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 
 - **Node.js with Express.js:** Used to build the server, facilitating the creation of robust and scalable APIs.
 - **MongoDB:** Implemented as the database to store book information and user data.
-- **JWT (JSON Web Token):** Utilized for secure user authentication and authorization. JWTs are issued upon successful login and sent with each subsequent request to authenticate the user's identity.
+- **Firebase Authentication with JWT (JSON Web Token):** Utilized for secure user authentication and authorization. Firebase Authentication handles user sign-up, login, and JWTs are used for secure communication between the client and server.
 
 ### HTTP Requests:
 
