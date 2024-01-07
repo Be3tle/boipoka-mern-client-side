@@ -56,14 +56,14 @@ const Nav = () => {
   }, []);
 
   const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 text-black">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
         as="li"
         variant="small"
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="/" className="flex items-center dark:text-violet-100">
+        <a href="/" className="flex items-center">
           Home
         </a>
       </Typography>
@@ -105,11 +105,11 @@ const Nav = () => {
 
   return (
     <div className="-m-6  w-[calc(100%+48px)]  pt-4 py-2">
-      <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 dark:bg-gray-800 bg-violet-50">
-        <div className="flex items-center justify-between text-blue-gray-900">
+      <Navbar className="fixed bg-opacity-25 border-0 bg-black top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 dark:bg-gray-800 text-white">
+        <div className="flex items-center justify-between ">
           <Link to="/" className="btn btn-ghost normal-case text-xl">
             <img className="w-10" src={logo} alt="" />
-            <h1 className="text-black dark:text-violet-100">
+            <h1 className="dark:text-violet-100">
               boi<span className="font-normal">poka</span>
             </h1>
           </Link>
@@ -123,9 +123,7 @@ const Nav = () => {
                   size="sm"
                   className="hidden lg:inline-block"
                 >
-                  <span className="text-black dark:text-violet-100">
-                    Log Out
-                  </span>
+                  <span className="text-violet-100">Log Out</span>
                 </Button>
               ) : (
                 <Link to="/login">
@@ -134,9 +132,7 @@ const Nav = () => {
                     size="sm"
                     className="hidden lg:inline-block"
                   >
-                    <span className="text-black dark:text-violet-100">
-                      Log In
-                    </span>
+                    <span className="text-violet-100">Log In</span>
                   </Button>
                 </Link>
               )}
@@ -196,9 +192,7 @@ const Nav = () => {
           {navList}
           <div className="flex items-center gap-x-1">
             <Button fullWidth variant="text" size="sm">
-              <span className="text-black font-medium dark:text-gray-100">
-                Log In
-              </span>
+              <span className="font-medium text-gray-100">Log In</span>
             </Button>
           </div>
         </MobileNav>
