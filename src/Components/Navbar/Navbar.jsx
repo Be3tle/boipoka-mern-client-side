@@ -104,7 +104,7 @@ const Nav = () => {
   );
 
   return (
-    <div className="-m-6  w-[calc(100%+48px)]  pt-4 py-2">
+    <div className="">
       <Navbar className="fixed bg-opacity-25 border-0 bg-black top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 dark:bg-gray-800 text-white">
         <div className="flex items-center justify-between ">
           <Link to="/" className="btn btn-ghost normal-case text-xl">
