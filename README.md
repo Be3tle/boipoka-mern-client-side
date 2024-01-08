@@ -1,7 +1,3 @@
-Apologies for the oversight. Let's ensure JWT is included in the project details:
-
----
-
 # boipoka (MERN Stack)
 
 This website is an online library built using the MERN (MongoDB, Express.js, React.js, Node.js) stack. It allows users to explore and borrow books from various genres, including history, fiction, comedy, and romance.
@@ -22,6 +18,7 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 - **Borrow Books**: Authenticated users can borrow books if they are available.
 - **Return Books**: Users can return borrowed books when they are finished reading them.
 - **User Dashboard**: Users have access to a dashboard where they can manage their borrowed books.
+- **Search Functionality**: Users can now search for books by title or author name on the "All Books" page, making it easier to find specific books of interest.
 
 ## Technologies Used
 
