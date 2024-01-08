@@ -69,9 +69,9 @@ To run the boipoka project locally, follow these steps:
 
 5. Open your browser and visit [http://localhost:5173/](http://localhost:5173/) or
 
-```bash
+   ```bash
    o
-```
+   ```
 
 to explore and enjoy the boipoka online library.
 
