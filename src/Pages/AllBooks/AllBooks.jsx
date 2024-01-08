@@ -63,7 +63,7 @@ const AllBooks = () => {
                 placeholder="Search by title or author"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="form-input mr-2"
+                className="form-input mr-2 rounded-lg border-gray-600 border-opacity-30"
               />
               <button className="btn" onClick={handleSearch}>
                 Search
