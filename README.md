@@ -37,4 +37,36 @@ This website is an online library built using the MERN (MongoDB, Express.js, Rea
 
 - **Axios:** Used for making HTTP requests from the frontend to the backend, facilitating seamless communication between the client and server.
 
+## Getting Started
+
+To run the boipoka project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Be3tle/boipoka-mern-client-side.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd boipoka-mern-client-side
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the boipoka app:
+
+   ```bash
+   npm run dev
+   ```
+
+   This will start the development server for the frontend.
+
+5. Open your browser and visit [http://localhost:3000/](http://localhost:3000/) to explore and enjoy the boipoka online library.
+
 Feel free to explore the website and enjoy borrowing books from various genres! If you encounter any issues or have suggestions for improvements, please don't hesitate to contribute. Happy reading!
