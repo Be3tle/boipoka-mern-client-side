@@ -67,6 +67,12 @@ To run the boipoka project locally, follow these steps:
 
    This will start the development server for the frontend.
 
-5. Open your browser and visit [http://localhost:3000/](http://localhost:3000/) to explore and enjoy the boipoka online library.
+5. Open your browser and visit [http://localhost:5173/](http://localhost:5173/) or
+
+```bash
+   o
+```
+
+to explore and enjoy the boipoka online library.
 
 Feel free to explore the website and enjoy borrowing books from various genres! If you encounter any issues or have suggestions for improvements, please don't hesitate to contribute. Happy reading!
